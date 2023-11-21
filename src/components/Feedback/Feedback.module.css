@@ -47,3 +47,8 @@
     font-size: 18px;
     padding-bottom: 8px;
 }
+.item>span{
+    font-weight: bold;
+    font-size: 20px;
+    color: #048080;;
+}
