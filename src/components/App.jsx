@@ -1,12 +1,7 @@
-// import Feedback from "./Feedback/Feedback";
-// export const App = () => {
-//   return <div>
-//     <Feedback/>
-//   </div>;
-// };
-// import React from 'react';
 import { Component } from 'react';
 import css from './Feedback/Feedback.module.css';
+import Section from './Section/Section';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 class App extends Component {
   constructor() {
     super();
@@ -44,38 +39,15 @@ class App extends Component {
     }
   }
 
-  
   render() {
     return (
-      <section className={css.feedback}>
-        <div>
-          <h1 className={css.title}>Please leave feedback</h1>
-          <div>
-            <button
-              className={css.button}
-              type="button"
-              id="good"
-              onClick={this.onFeedback}
-            >
-              Good
-            </button>
-            <button
-              className={css.button}
-              type="button"
-              id="neutral"
-              onClick={this.onFeedback}
-            >
-              Neutral
-            </button>
-            <button
-              className={css.button}
-              type="button"
-              id="bad"
-              onClick={this.onFeedback}
-            >
-              Bad
-            </button>
-          </div>
+      <Section title='Please leave feedback'>
+        <FeedbackOptions options={[
+          { id: 'good', name: 'Good' },
+          { id: 'neutral', name: "Neutral" },
+          {id:"bad",name:"Bad"}
+        ]} onFeedback={this.onFeedback} />
+        
           <div className={css.resultStatistics}>
             <h2 className={css.titleStatistics}>Statistics</h2>
             <ul className={css.list}>
@@ -92,14 +64,16 @@ class App extends Component {
                 Total: <span>{this.countTotalFeedback()}</span>
               </li>
               <li className={css.item}>
-                Positive feedback: <span>{this.countPositiveFeedbackPercentage()}%</span>
+                Positive feedback:{' '}
+                <span>{this.countPositiveFeedbackPercentage()}%</span>
               </li>
             </ul>
           </div>
-        </div>
-      </section>
+</Section>
+      
     );
   }
 }
 
 export default App;
+
