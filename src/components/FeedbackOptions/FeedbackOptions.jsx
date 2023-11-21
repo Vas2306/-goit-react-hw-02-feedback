@@ -1,4 +1,4 @@
-import css from '../Feedback/Feedback.module.css';
+import css from './FeedbackOptions.module.css';
 const FeedbackOptions = ({ options, onFeedback }) => {
   return (
     <div>

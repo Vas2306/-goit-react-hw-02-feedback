@@ -1,4 +1,4 @@
-import css from '../Feedback/Feedback.module.css';
+import css from './Statistics.module.css';
 const Statistics = ({good, neutral, bad, total, positiveFeedback}) => {
   return (
     <ul className={css.list}>

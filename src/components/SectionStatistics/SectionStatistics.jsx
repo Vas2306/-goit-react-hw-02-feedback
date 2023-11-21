@@ -1,4 +1,4 @@
-import css from '../Feedback/Feedback.module.css';
+import css from './SectionStatistics.module.css';
 const SectionStatistics = ({ title, children }) => {
   return (
     <div className={css.resultStatistics}>
