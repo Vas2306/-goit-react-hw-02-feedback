@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import css from "./Notification.module.css"
 const Notification = ({ message }) => {
     return (<p className={css.message}>
@@ -6,3 +7,6 @@ const Notification = ({ message }) => {
 }
  
 export default Notification;
+Notification.propTypes = {
+message:PropTypes.string,    
+}

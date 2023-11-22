@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import css from './SectionStatistics.module.css';
 const SectionStatistics = ({ title, children }) => {
   return (
@@ -9,3 +10,7 @@ const SectionStatistics = ({ title, children }) => {
 };
 
 export default SectionStatistics;
+SectionStatistics.propTypes = {
+  title: PropTypes.string,
+  children:PropTypes.node,
+}
